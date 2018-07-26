@@ -1,0 +1,149 @@
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../project2/styles/styles.css">
+</head>
+
+<div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="photos.html">Photos</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="local-events.html">Local Events</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    <i class="fa fa-bars"></i>
+  </a>
+</div> 
+<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        } </script>
+ <!-- Images used to open the lightbox -->
+ <div class="row">
+        <div class="column">
+          <img src="../project2/pictures/dining-room.jpg" width="100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+          <img src="../project2/pictures/kitchen.jpg" width="100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+          <img src="../project2/pictures/living-room.jpg" width="100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+          <img src="../project2/pictures/bedroom1.jpg"  width="100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="../project2/pictures/bedroom2.jpg" width="100%" onclick="openModal();currentSlide(5)" class="hover-shadow">
+        </div>
+        <div class="column">
+             <img src="../project2/pictures/bathroom.jpg" width="100%" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="../project2/pictures/den.jpg" width="100%" onclick="openModal();currentSlide(7)" class="hover-shadow">
+             </div>
+             <div class="column">
+              <img src="../project2/pictures/exterior.jpg" width="100%" onclick="openModal();currentSlide(8)" class="hover-shadow">
+             </div>
+      </div>
+      
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 8</div>
+            <img src="../project2/pictures/dining-room.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 8</div>
+            <img src="../project2/pictures/kitchen.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 8</div>
+            <img src="../project2/pictures/living-room.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">4 / 8</div>
+            <img src="../project2/pictures/bedroom1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
+            <img src="../project2/pictures/bedroom2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+            <img src="../project2/pictures/bathroom.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">7 / 8</div>
+              <img src="../project2/pictures/den.jpg" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="../project2/pictures/exterior.jpg" style="width:100%">
+                </div>
+      
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+
+        </div>
+      </div> 
+      <script>
+            // Open the Modal
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+            
+            // Close the Modal
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+            </script>
