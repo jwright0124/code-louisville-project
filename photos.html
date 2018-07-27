@@ -2,7 +2,8 @@
  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../project2/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/script.js"></script>
 </head>
 
 <div class="topnav" id="myTopnav">
@@ -15,40 +16,31 @@
     <i class="fa fa-bars"></i>
   </a>
 </div> 
-<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        } </script>
  <!-- Images used to open the lightbox -->
  <div class="row">
         <div class="column">
-          <img src="../project2/pictures/dining-room.jpg" width="100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          <img src="pictures/dining-room.jpg" width="100%" onclick="openModal();" class="hover-shadow">
         </div>
         <div class="column">
-          <img src="../project2/pictures/kitchen.jpg" width="100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+          <img src="pictures/kitchen.jpg" width="100%" onclick="openModal();" class="hover-shadow">
         </div>
         <div class="column">
-          <img src="../project2/pictures/living-room.jpg" width="100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
+          <img src="pictures/living-room.jpg" width="100%" onclick="openModal();" class="hover-shadow">
         </div>
         <div class="column">
-          <img src="../project2/pictures/bedroom1.jpg"  width="100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+          <img src="pictures/bedroom1.jpg"  width="100%" onclick="openModal();" class="hover-shadow">
         </div>
         <div class="column">
-            <img src="../project2/pictures/bedroom2.jpg" width="100%" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            <img src="pictures/bedroom2.jpg" width="100%" onclick="openModal();" class="hover-shadow">
         </div>
         <div class="column">
-             <img src="../project2/pictures/bathroom.jpg" width="100%" onclick="openModal();currentSlide(6)" class="hover-shadow">
+             <img src="pictures/bathroom.jpg" width="100%" onclick="openModal();" class="hover-shadow">
             </div>
             <div class="column">
-              <img src="../project2/pictures/den.jpg" width="100%" onclick="openModal();currentSlide(7)" class="hover-shadow">
+              <img src="pictures/den.jpg" width="100%" onclick="openModal();" class="hover-shadow">
              </div>
              <div class="column">
-              <img src="../project2/pictures/exterior.jpg" width="100%" onclick="openModal();currentSlide(8)" class="hover-shadow">
+              <img src="pictures/exterior.jpg" width="100%" onclick="openModal();" class="hover-shadow">
              </div>
       </div>
       
@@ -59,38 +51,38 @@
       
           <div class="mySlides">
             <div class="numbertext">1 / 8</div>
-            <img src="../project2/pictures/dining-room.jpg" style="width:100%">
+            <img src="pictures/dining-room.jpg" style="width:100%">
           </div>
       
           <div class="mySlides">
             <div class="numbertext">2 / 8</div>
-            <img src="../project2/pictures/kitchen.jpg" style="width:100%">
+            <img src="pictures/kitchen.jpg" style="width:100%">
           </div>
       
           <div class="mySlides">
             <div class="numbertext">3 / 8</div>
-            <img src="../project2/pictures/living-room.jpg" style="width:100%">
+            <img src="pictures/living-room.jpg" style="width:100%">
           </div>
       
           <div class="mySlides">
             <div class="numbertext">4 / 8</div>
-            <img src="../project2/pictures/bedroom1.jpg" style="width:100%">
+            <img src="pictures/bedroom1.jpg" style="width:100%">
           </div>
           <div class="mySlides">
             <div class="numbertext">5 / 8</div>
-            <img src="../project2/pictures/bedroom2.jpg" style="width:100%">
+            <img src="pictures/bedroom2.jpg" style="width:100%">
             </div>
             <div class="mySlides">
             <div class="numbertext">6 / 8</div>
-            <img src="../project2/pictures/bathroom.jpg" style="width:100%">
+            <img src="pictures/bathroom.jpg" style="width:100%">
             </div>
             <div class="mySlides">
               <div class="numbertext">7 / 8</div>
-              <img src="../project2/pictures/den.jpg" style="width:100%">
+              <img src="pictures/den.jpg" style="width:100%">
               </div>
               <div class="mySlides">
                 <div class="numbertext">8 / 8</div>
-                <img src="../project2/pictures/exterior.jpg" style="width:100%">
+                <img src="pictures/exterior.jpg" style="width:100%">
                 </div>
       
           <!-- Next/previous controls -->
@@ -122,11 +114,6 @@
             // Next/previous controls
             function plusSlides(n) {
               showSlides(slideIndex += n);
-            }
-            
-            // Thumbnail image controls
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
             }
             
             function showSlides(n) {
